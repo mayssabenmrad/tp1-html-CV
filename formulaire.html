@@ -7,4 +7,103 @@
     <meta name="keywords" content="tp,html,formulaire">
     <!--fichier html pour le formulaire-->
 </head>
+    <center><h1>Mon premier formulaire</h1></center>
+    <form action="script.json" method="post" name="formulaire">
+        <fieldset>
+            <legend>Connexion</legend>
+            <label for="genre">Vous êtes</label>
+            <select name="genre">
+                <option value="Mlle">Mademoiselle</option>
+                <option value="Mme">Madame</option>
+                <option value="Mr">Monsieur</option>
+            </select>
+            </br>
+            <label for="idt">Identifiant*: </label><input type="text" id="idt" name="idt" size="15" maxlength="15" required/>
+            <br/>
+            
+            <label for="mdp">Nouveau mot de passe </label><input type="password" id="mdp" name="mdp" size="15" maxlength="15"/>
+            <br/>
+            
+            <label for="idt">Confirmation mot de passe </label><input type="password" id="mdp" name="mdp" size="15" maxlength="15"/>
+            <br/>
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Détails personnels</legend>
+            <label for="prénom">votre prénom: <input type="text" placeholder="votre prénom" id="prénom" name="prénom"  size="15" maxlength="15"/></label>
+            <br/>
+            <label for="nom">votre nom: </label><input type="text" placeholder="votre nom" id="nom" name="nom" size="15" maxlength="15"/>
+            <br/>
+            <label for="date">Date de naissance</label>
+            <input type="date" id="date" name="date"/>
+            <br/>
+            <label for="ville">Lieu de naissance</label>
+            <select name="ville" size="2">
+                <option value="tn">Tunis</option>
+                <option value="sf">Sfax</option>
+                <option value="Mon">Monastir</option>
+                <option value="so">Sousse</option>
+                <option value="bz">Bizerte</option>
+            </select>
+            </br>
+            <label for="photo">photo</label>
+            <input type="file" id="photo" name="photo"/>
+            <br/>
+            
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="exemple@gmail.com"/>
+            <br/>
+            
+            <label for="tel">tel</label>
+            <input type="tel" id="tel" name="tel" placeholder="27521990"/>
+            <br/>
+            
+            <label for="url">url</label>
+            <input type="url" id="url" name="url" placeholder="lien de votre page web"/>
+            <br/>
+            
+            <label for="nb">Nombre d'années après bac</label>
+            <input type="number" id="nb" name="nb"/>
+
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Informations Supplémentaires</legend>
+            
+            <label for="langues">Quelles langues parlez-vous?</label>
+            <input type="checkbox" name="langues" id="langues" checked/>français
+            <input type="checkbox" name="langues" id="langues" />anglais
+            <input type="checkbox" name="langues" id="langues" />espagnol
+            <input type="checkbox" name="langues" id="langues"  />allemand
+            <br/>
+            <label for="niv">Niveau d'anglais</label>
+            <input type="range" id="niv" name="niv"/>
+            <br/>
+            
+            <label for="contact">Comment souhaitez-vous être contacté?</label>
+            
+            <input type="radio" name="contact" value="1"/>Email
+            <input type="radio" name="contact" value="2"/>Téléphone
+            <input type="radio" id="contact" name="contact" value="3"/>Message
+
+        </fieldset>
+        
+        <fieldset>
+            <legend>Extra</legend>
+            <label for="comment">Des suggestions à donner?</label>
+            <br/>
+            <textarea name="comment" rows="5" cols="100"></textarea>
+            <br/>
+            <label for="key">Recherche de mots clés</label>
+            <input type="search" id="key" name="key"/>
+        </fieldset>
+    </form>
+    <br/>
+    *Il s'agit d'un champ obligatoire
+    <br/>
+    <input type="submit" value="envoyer"/>
+    <input type="reset" value="effacer"/>
+</body>
 </html>
