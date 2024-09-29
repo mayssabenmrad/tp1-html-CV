@@ -7,12 +7,13 @@
     <meta name="keywords" content="tp,html,formulaire">
     <!--fichier html pour le formulaire-->
 </head>
+<body>
     <center><h1>Mon premier formulaire</h1></center>
-    <form action="script.json" method="post" name="formulaire">
+    <form action="http://google.com" method="post" name="formulaire">
         <fieldset>
             <legend>Connexion</legend>
-            <label for="genre">Vous êtes</label>
-            <select name="genre">
+            <label for="genre">Vous êtes:</label>
+            <select name="genre" id="genre">
                 <option value="Mlle">Mademoiselle</option>
                 <option value="Mme">Madame</option>
                 <option value="Mr">Monsieur</option>
@@ -21,25 +22,25 @@
             <label for="idt">Identifiant*: </label><input type="text" id="idt" name="idt" size="15" maxlength="15" required/>
             <br/>
             
-            <label for="mdp">Nouveau mot de passe </label><input type="password" id="mdp" name="mdp" size="15" maxlength="15"/>
+            <label for="mdp">Nouveau mot de passe: </label><input type="password" id="mdp" name="mdp" size="15" maxlength="15"/>
             <br/>
             
-            <label for="idt">Confirmation mot de passe </label><input type="password" id="mdp" name="mdp" size="15" maxlength="15"/>
+            <label for="idt">Confirmation mot de passe: </label><input type="password" id="mdp" name="mdp" size="15" maxlength="15"/>
             <br/>
 
         </fieldset>
         
         <fieldset>
             <legend>Détails personnels</legend>
-            <label for="prénom">votre prénom: <input type="text" placeholder="votre prénom" id="prénom" name="prénom"  size="15" maxlength="15"/></label>
+            <label for="prénom">Prénom: <input type="text" placeholder="votre prénom" id="prénom" name="prénom"  size="15" maxlength="15"/></label>
             <br/>
-            <label for="nom">votre nom: </label><input type="text" placeholder="votre nom" id="nom" name="nom" size="15" maxlength="15"/>
+            <label for="nom">Nom: </label><input type="text" placeholder="votre nom" id="nom" name="nom" size="15" maxlength="15"/>
             <br/>
-            <label for="date">Date de naissance</label>
+            <label for="date">Date de naissance:</label>
             <input type="date" id="date" name="date"/>
             <br/>
-            <label for="ville">Lieu de naissance</label>
-            <select name="ville" size="2">
+            <label for="ville">Lieu de naissance:</label>
+            <select name="ville" id="ville" size="2">
                 <option value="tn">Tunis</option>
                 <option value="sf">Sfax</option>
                 <option value="Mon">Monastir</option>
@@ -47,23 +48,23 @@
                 <option value="bz">Bizerte</option>
             </select>
             </br>
-            <label for="photo">photo</label>
+            <label for="photo">Photo:</label>
             <input type="file" id="photo" name="photo"/>
             <br/>
             
-            <label for="email">email</label>
+            <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="exemple@gmail.com"/>
             <br/>
             
-            <label for="tel">tel</label>
+            <label for="tel">Téléphone:</label>
             <input type="tel" id="tel" name="tel" placeholder="27521990"/>
             <br/>
             
-            <label for="url">url</label>
+            <label for="url">URL:</label>
             <input type="url" id="url" name="url" placeholder="lien de votre page web"/>
             <br/>
             
-            <label for="nb">Nombre d'années après bac</label>
+            <label for="nb">Nombre d'années après bac:</label>
             <input type="number" id="nb" name="nb"/>
 
 
@@ -73,6 +74,7 @@
             <legend>Informations Supplémentaires</legend>
             
             <label for="langues">Quelles langues parlez-vous?</label>
+            <br/>
             <input type="checkbox" name="langues" id="langues" checked/>français
             <input type="checkbox" name="langues" id="langues" />anglais
             <input type="checkbox" name="langues" id="langues" />espagnol
@@ -96,15 +98,16 @@
             <br/>
             <textarea name="comment" rows="5" cols="100"></textarea>
             <br/>
-            <label for="key">Recherche de mots clés</label>
+            <label for="key">Recherche par mots clés:</label>
             <input type="search" id="key" name="key"/>
         </fieldset>
-    <br/>
+        
     *Il s'agit d'un champ obligatoire
     <br/>
     <br/>
     <input type="submit" value="envoyer"/>
     <input type="reset" value="effacer"/>
     </form>
+    <br/>
 </body>
 </html>
